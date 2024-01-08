@@ -1,0 +1,721 @@
+a{
+	cursor: pointer;
+}
+
+@font-face {
+    font-family: 'Craft Gothic Condensed';
+    src: local('Craft Gothic Condensed'), local('Craft-Gothic-Condensed'),
+        url('fonts/CraftGothic-Condensed.woff2') format('woff2'),
+        url('fonts/CraftGothic-Condensed.woff') format('woff'),
+        url('fonts/CraftGothic-Condensed.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Craft Gothic Light';
+    src: local('Craft Gothic Light Condensed'), local('Craft-Gothic-Light-Condensed'),
+        url('fonts/CraftGothic-LightCondensed.woff2') format('woff2'),
+        url('fonts/CraftGothic-LightCondensed.woff') format('woff'),
+        url('fonts/CraftGothic-LightCondensed.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Craft Gothics Light';
+    src: local('Craft Gothic Light'), local('Craft-Gothic-Light'),
+        url('fonts/CraftGothic-Light.woff2') format('woff2'),
+        url('fonts/CraftGothic-Light.woff') format('woff'),
+        url('fonts/CraftGothic-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Craft Gothic';
+    src: local('Craft Gothic Regular'), local('Craft-Gothic-Regular'),
+        url('fonts/CraftGothic-Regular.woff2') format('woff2'),
+        url('fonts/CraftGothic-Regular.woff') format('woff'),
+        url('fonts/CraftGothic-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed Bold';
+    src: local('OpenSans-CondBold'),
+        url('fonts/OpenSans-CondBold.ttf') format('trueType'), 
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed Light';
+    src: local('OpenSans-CondBold'),
+		url('fonts/OpenSans-CondLight.ttf') format('trueType'),;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed Semibold';
+    src: local('OpenSans-CondBold'),
+		url('fonts/OpenSans_Condensed-SemiBold.ttf') format('trueType'),;
+    font-weight: 300;
+    font-style: normal;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	margin: 0;
+}
+
+
+.navigation {
+	height: 8vh;
+	display: flex;
+	justify-content: space-between;
+	background-color: #333333;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}	
+
+.left-nav {
+	width: 75%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-bar {
+	width: 100%;
+    list-style: none;
+    position: relative;
+    background-color: var(--color2);
+    padding: 1.2rem 2rem;
+}
+.menu {display: flex; }
+.menu li {padding-left: 3rem;}
+.menu li a {
+    text-decoration: none;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    margin-right: 5.5rem;
+    font-size: clamp(1rem, 1vw, 2.2rem);
+    color: white;
+    font-weight: bold;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0 ;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+
+.open-menu , .close-menu {
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    font-size: 3rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 2rem;
+    right: 2rem;
+}
+#check {display: none;}
+
+.right-nav {
+	width: 25%;
+	padding-top: .5rem;
+	background-image: url('nav-bg.svg');
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	padding-right: 1%;
+	justify-content: space-between;	
+	align-items:center;
+}
+
+.logo-img img {
+	position:relative;
+	left: 6rem;
+	width: 4rem;
+	
+}
+
+.search-logo {
+	margin-bottom: 1rem;
+	width: 4rem;
+}
+.search-container {
+	margin-right: 10%;
+}
+.search-bar {
+    padding: 1rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    min-width: 12.5vw;
+	background-image: url('images/search_icon.png');
+	background-repeat: no-repeat;
+    background-position: 21.5rem center;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.search_bar.hidden {
+    display: none;
+}
+
+.search-bar::placeholder {
+    color: white;
+}
+
+.suggestion-item {
+	padding: 1rem 0 1rem 3rem;
+	font-size: 1.5rem;
+	font-family:'Poppins';
+	color: white;
+    margin-right: 10%;
+	background-color: transparent;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+.suggestion-item:hover {
+    background-color: GREY; 
+}
+
+.content {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+
+.container1{
+	max-width: 160rem;
+	margin: 5% auto 5% auto;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 3%;
+}
+
+.prod-img1{
+	width: 70rem;
+	height: 10%;
+	max-height: 300px;
+}
+
+
+.prod-img1 img{
+	width: 100% ;
+	max-height: 400px;
+	object-fit: cover;
+}
+
+.prod-intro{
+	width: 45%;
+	height: 100%;
+	margin-left: 5%;
+}
+
+.prod-type1{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 3rem;
+	font-weight: 400;
+	font-stretch: condensed;
+	text-align: left;
+	line-height: 1.2;
+}
+
+.prod-type1 p{
+	margin: 0;
+}
+
+.prod-unit1{
+	margin:0;
+	font-size: 5rem;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-stretch: semi-condensed;
+}
+
+.prod-type1 hr{
+	margin: 2% 0;
+	border: 2px solid red;
+	text-align: left;
+	width: 25%;
+}
+
+.line-partition{
+	width: 150px;
+	height: 3px;
+	background-color: #AF1A1A;
+	margin-bottom: 5px;
+}
+
+.prod-descrip1{
+	font-size: 1.5rem;
+	font-family: 'Poppins', sans-serif;
+	padding-bottom: 10px;
+}
+
+.prod-price1{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: 2rem;
+	padding-bottom: 10px;
+}
+
+.loc-contact{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.loc-contact img{
+	margin-right: 10px;
+}
+
+.loc-contact p{
+	margin-right: 10px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.4rem;
+	font-weight: 300;
+}
+
+.payment-btn{
+	width: 200px;
+	height: 35px;
+	background-color: #A20E0E;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.payment-btn a{
+	font-family: 'Poppins', sans-serif;
+	color: #FFF;
+	font-size: 1.5rem; 	
+	font-weight: 600;
+}
+
+.container2{
+	max-width: 160rem;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	margin: 20px auto 5% auto;
+	padding: 0 3%;
+}
+
+.key_feat{
+	width: 100%;
+	height:100px;
+	color: #FFF;
+	border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.key_feat tr{
+	text-align: left;
+    padding: 10px;
+    border: 1px solid white;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+}
+
+.container2 .key_feat tr:first-child td:first-child{
+	width: 230px;
+    background: linear-gradient(180deg, #A60101 0%, #BF1B1B 50%, #960909 100%);
+    color: white;
+	vertical-align: middle;
+	margin-left: 20px;
+	padding-left: 30px;
+}
+
+.key_feat tr:not(:first-child), .key_feat td:not(:first-child){
+	background: linear-gradient(180deg, #333333 0%, #3E3E3E 50.52%, #3A3A3A 100%);
+    color: white;
+	vertical-align: middle;
+	padding-left: 30px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	font-size:1rem;
+}
+
+.key_feat tr:not(:first-child), .key_feat td:not(:first-child) span{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size:2rem;
+}
+
+.key_feat_txt{
+	font-family: 'Poppins', sans-serif;
+	font-size: 2.5rem;
+	font-weight: 600px;
+	line-height: 30px;
+}
+
+.key_feat_txt span{
+	font-family: 'Candal', sans-serif;
+	font-size: 2.5rem;
+	font-weight: 400px;
+}
+
+.container3{
+	max-width: 160rem;
+	height: fit-content;
+	margin: 5% auto 5% auto;
+	padding: 0 3%;
+}
+
+.more-featured {
+	font-family: 'Poppins';
+	margin-bottom: 10px;
+	color: #373737;
+	opacity: 0.7;
+	font-size: 2rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+	height: fit-content;
+	table-layout: fixed;
+}
+
+.responsive-cell {
+	background: #3C3B3B;
+	padding: 4px;
+	font-family: 'Poppins';
+	color: white;
+	border-right: 1px solid #C7C7C7;
+	font-weight: 100;
+	line-height: 2;
+	text-align: center;
+}
+
+.responsive-cell li{
+	font-size: 2rem;
+}
+
+th {
+    text-align: center;
+	background: #B00C0C;
+	font-family: 'Poppins';
+	font-weight: 600;
+	color: white;
+	padding: 8px;
+	border-right: 1px solid #C7C7C7;
+	font-size: 2rem;
+}
+
+ul {
+	margin: 4% 0;
+}
+
+.container4{
+	max-width: 140rem;
+	margin: 5% auto 5% auto;
+	padding: 0 3% 20px 3%;
+	background-color: #F3F3F3;
+	
+}
+
+.seperator{
+	display: flex;
+	justify-content: space-between;
+}
+
+.container4 h2{
+	font-family: 'Poppins', sans-serif;
+	font-size: 2rem;
+	font-weight: 600;
+	opacity: 0.8;
+	color: #434343;
+	padding-top: 10px;
+	margin-bottom:20px;
+}
+
+.rating-container{
+	max-width: 140rem;
+	padding: 0 3%;
+	background-color: #F3F3F3;
+	display: flex;
+	justify-content: space-between;
+}
+
+.prod-img2{
+	width: 60rem;
+	border: 1px solid grey;
+	height: 10%;
+}
+
+.prod-img2 img{
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.rating-desc{
+	width: 100rem;
+	background-color: #FFF;
+	border: 1px solid grey;
+}
+
+.safety{
+	width: 100%;
+	height: 50px;
+	background: linear-gradient(180deg, #B00C0C 0%, #CD2222 50.52%, #B00C0C 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.safety p{
+	font-family: 'Poppins', sans-serif;
+	font-size: 3rem;
+	font-weight: 500;
+	color: #FFF;
+}
+
+.safety2{
+	width: 100%;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+.safety2 img{
+	width: 30px;
+	height: 100px;
+	margin-right: 20px;
+}
+
+.safety2 p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 3rem;
+	font-weight: 700;
+	color: #E60013;
+}
+
+.rating-imgs{
+	width: 90%;
+	height: 300px;
+	margin: auto 5% auto 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.rating-imgs img{
+	max-width: 500px;
+	max-height: 450px;
+	object-fit: cover;
+}
+
+.rating-list{
+	list-style-type: circle;
+	padding: 0 20%;
+}
+
+.rating-list li{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3rem;
+}
+
+.footer {
+	padding: 2% 4%;
+	background-color: #252222;
+	display: flex;
+	justify-content: center;
+}
+
+.section {
+	width: 170rem;
+	justify-content: space-between;
+	display: flex;
+}
+.section1 {
+	width: 22%;
+}
+
+.footer-logo {
+	width: 22rem;	
+	max-width:100%;
+}
+
+.section1 p {
+	font-family: 'Niramit';
+	color: white;
+	font-size: 1.9rem;
+	margin: 1% 0;
+}
+
+.section1 hr {
+	width: 22%;
+	margin: 0;
+}
+
+.social-links {
+	display:flex;
+	align-items: center;
+	margin-top:12%;
+	flex-wrap: wrap;
+}
+
+.social-links img{
+	margin-right: 4%;
+	width: 4rem;
+}
+
+
+.section2 {
+	width: 50%;
+	display: flex;
+	justify-content:space-between;
+}
+
+.footer-title {
+	font-family: 'Craft Gothic';
+	color: #FF3A3A;
+	font-size: 2.5rem;
+	margin: .5rem 0 1rem 0;
+}
+
+.red-line {
+	border-color:#FF3A3A;
+	width: 15%;
+	margin:0;
+}
+
+.quick-li {
+	width: 40%;
+}
+
+.quick-li ul {
+	display:flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 0 0 0 1.2rem;
+}
+
+
+.quick-li li {
+	flex: 0 0 calc(50%);
+	list-style-image: url('images/bullet.svg');
+	line-height: 4rem;
+	font-family: 'Craft Gothics Light';
+	font-size: 1.8rem;
+}
+
+.quick-li a {
+	color: white;
+	text-decoration: none;
+}
+
+.contact-info {
+	width: 40%;
+}
+
+.infos {
+	display:flex;
+}
+
+.location-details {
+	font-family: 'Craft Gothics Light';
+	color: white;
+	font-size: 1.6rem;
+	margin-left: 7.4%;
+}
+
+.info-p {
+	font-family: 'Craft Gothics Light';
+	color: white;
+	margin-top: 3.8%;
+	font-size: 1.6rem;
+	margin-left: 6%;
+}
+
+.section3 {
+	width: 20%;
+}
+
+.section3 p {
+	font-family: 'Poppins';
+	color: white;
+	font-weight: 500;
+	font-size: 1.6rem;
+	margin: .5rem 0 2.5rem 0;
+}
+
+.call-box {
+	width: 26rem;	
+	max-width:100%;
+}
+
+.credit-cards {
+	margin-top: 2rem;
+}
+
+.credit-cards img {
+	width: 4.65rem;
+	margin-right: .5rem;
+}
+
+
+@media only screen and (max-width: 768px){
+html {
+	font-size: 43%;
+}
+
+.menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 60px;}
+    .menu li a {padding: 10px;  font-size: 2rem;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+
+}
+
+
