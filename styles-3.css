@@ -30,7 +30,7 @@
 @font-face {
     font-family: 'Tahoma Bold';
     src: local('TAHOMAB0'),
-		url('fonts/TAHOMAB0.ttf') format('trueType'),;
+		url('fonts/TAHOMAB0.TTF') format('trueType'),;
     font-weight: 300;
     font-style: normal;
 }
