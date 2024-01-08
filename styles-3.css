@@ -31,7 +31,7 @@
     font-family: 'Tahoma Bold';
     src: local('TAHOMAB0'),
 		url('fonts/TAHOMAB0.TTF') format('trueType'),;
-    font-weight: 300;
+    font-weight: normal;
     font-style: normal;
 }
 
