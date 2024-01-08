@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Reviews</title>
+    <link rel="stylesheet" type="text/css" href="styles-3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Niramit:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" 
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="navigation">
+    <div class="left-nav">
+        <nav>
+            <ul class='nav-bar'>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="promos/promosPage.html">Promos</a></li>
+                    <li><a href="news-and-reviews.html">News and Reviews</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+    </div>
+    <div class="right-nav">
+		<p> MITSUBISHI </p>
+        <div class="logo-img">
+            <img src="images/Products/logo.svg">
+        </div>
+        <img class="search-logo" src="images/Products/search-logo.svg" onclick="toggleSearchBar()">
+        <div class="search_bar" id="searchBarContainer" style="display: none;">
+            <div class="search-container">
+                <input type="text" class="search-bar" id="searchBar" placeholder="Find Key Words" onkeyup="searchSection(event)" onblur="hideSearchBar()" onkeydown="handleSearch(event)">
+                <div class="search_suggestions">
+                    <p id="suggestions-list"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<div class = "body">
+<div class = "hero-image">
+<h1>NEWS AND REVIEWS WEBPAGE</h1>
+<p>Discover Mitsubishi Otis Paco, Manila. Meet the website owner,  <br>Mr. Ryan Barreto
+and explore the latest news and reviews on <br> your favorite models.
+Stay informed, stay inspired!</p>
+<a href="https://www.facebook.com/mitsubishimanilaph" class="custom-button">LEARN MORE &nbsp; &nbsp; <span> > </span> </a>
+</div>
+
+<div class = "news-body" id = "news">
+<div class ="left-side-news">
+<div class = "news">
+<div class = "img-here"><a href = "https://www.facebook.com/ryangwapuhon/posts/pfbid02pHmWrdkbM7iJHxBKUbJZ9WRHtvaVYgiRCDt25YVJoCad3KnLXTXz4wRxtKY52GFkl"><img src = "images/News/news-img-1.svg"><div class = "sample-date"> <p>Ryan Barreto</p> </div> 
+<h1>Latest Customer of Mr. Barreto</h1> <div class = "news-details"> <img src = "images/News/clock-icon.svg"> <p> Dec 4,2023 </p>  <img class = "person-icon" src = "images/News/person-icon.svg"> <p> Ryan Barreto</p></div></a></div>	
+
+<div class = "img-here"><a href = "https://www.topgear.com.ph/news/industry-news/mitsubishi-ph-welcomes-new-president-and-ceo?fbclid=IwAR0Cm4jmyrmZovOHkTQpqdUVbN8vOiMGtmTljNHWil-EFeZ6K3jUWW1QUsg"><img src = "images/News/news-img-3.svg"><div class = "sample-date"> <p>TopGearPh</p> </div> 
+<h1>Mitsubishi PH welcomes new CEO</h1> <div class = "news-details"> <img src = "images/News/clock-icon.svg"> <p> Mar 20,2015 </p>  <img class = "person-icon" src = "images/News/person-icon.svg"> <p> Tracy Carpena</p></div></a></div>	
+</div>
+
+<div class = "news" id = "news2">
+<div class = "img-here"><a href = "https://www.figma.com/file/nQiHgulQUAhkDVyfdLDAnj/VISAYA%2C-JOEY-JR.-R.-(MID-FIDELITY-MITSUBISHI-WEBSITE)-(Copy)?type=design&node-id=0-1&mode=design&t=FYT8j6GOM1Bq6IHp-0"><img src = "images/News/news-img-4.svg"><div class = "sample-date"> <p>Ryan Barreto</p> </div> 
+<h1>Marking the creation of this website.</h1> <div class = "news-details"> <img src = "images/News/clock-icon.svg"> <p> December 28, 2023 </p>  <img class = "person-icon" src = "images/News/person-icon.svg"> <p> Ryan Barreto</p></div></a></div>	
+<div class = "img-here"><a href = "https://www.facebook.com/photo?fbid=387749807101031&set=a.205618315314182"><img src = "images/News/news-img-2.svg"><div class = "sample-date"> <p>Ryan Barreto</p> </div> 
+<h1>Rank 2 Salesman of the Year</h1> <div class = "news-details"> <img src = "images/News/clock-icon.svg"> <p> January 1,2024</p>  <img class = "person-icon" src = "images/News/person-icon.svg"> <p> Ryan Barreto</p></div></a></div>	
+</div>
+
+<div class = "featured" id ="video">
+<div class = "left-featured">
+<iframe src="https://www.youtube.com/embed/Jk2EKavUfn4?autoplay=1" title="5000 PMS MITSUBISHI XPANDER Experience 📍Mitsubishi OTIS" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class = "right-featured">
+<div class = "content">
+<h1> ABOUT MITSUBISHI <br> WEBSITE</h1>
+<p>Welcome to Mitsubishi Otis Paco! I'm <b>John Ryan Bareto</b>, your dedicated car sales agent.With a commitment to customer satisfaction, I offer personalized consultations, extensive car knowledge, and transparent transactions.</p> <a href = "contact_us.html"> <button class = "location_button"> 
+<img src = "images/News/map-logo.svg"> <p> LOCATION </p></button> </a>
+</div>
+</div>
+</div>
+
+<div class = "social-media-news" id = "socialMedia">
+<div class = "first-box">
+<a href = "https://www.instagram.com/p/CkYQb_rJeVr/?igsh=aXJ1b291bnRyd2k2&fbclid=IwAR0rXpGlpAO2nbtCIo-8qmPu7dOltVf_G7qtzh0XS-sPsZ-9t8W-UobrghI">
+<div class = "twitter-title">
+<div class = "clock"><img src = "images/News/clock-logo.svg"> <p> Oct 31, 2022 </p> </div> <div class = "comment-ig"> <img src= "images/News/comment-logo.svg"> <p> 3 </p> </div>
+</div>
+<div class = "twitter-content">
+ <p>"Drive your Ambition <br># ILoveMyJob <br>#SellingMitsubishi Cars" </p>
+</div>
+<div class = "publisher">
+<img src = "images/News/ryan.svg"> <p> Ryan Barreto </p>
+</div>
+</a>
+</div>
+
+
+<div class = "second-box">
+<div class = "left-side-box"> 
+<h2>LATEST UPDATE</a> </h2> <a href = "https://www.instagram.com/p/C1cPMYHhB95/?igsh=MThrcnliZHZ5M3hkcw%3D%3D&fbclid=IwAR2fZ6xItGEUBHn6jW3lGtSXVNWHKWaKrcwoAZ2r9U1LBKsoOtisd8FUh0o"><h1>  All glory belongs to Jesus. </h1></a> <p>But my God shall supply all your needs according to his riches in glory by Christ Jesus. </p>
+<div class = "bottom-content">
+<img src= "images/News/heart-icon-grey.svg"> <p> 1 </p> <img src= "images/News/comment-icon-grey.svg"> <p> 0 </p> <img src= "images/News/clock-icon-grey.svg"> <p> Dec 29,2023</p>
+</div>
+</div>
+<div class = "right-side-box"></div>
+</div>
+
+
+<div class = "third-box">
+<div class = "top-third-box"> <p> Mitsubishi</p> <img src = "images/News/chat-box-3.svg"> <p> 2</p></div>
+<div class = "publisher2"><a href = "https://mitsubishi-manila.business.site/">
+<img src = "images/News/ryan.svg"> </a><p> Ryan Barreto </p> 
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<button id="toggleButton"> <img src = "images/News/toggle-button.svg"></button>
+<div class = "right-side-news" id = "reviews">
+<div class = "title-comment-section">
+<img src = "images/News/comments-logo.svg"> <p>Reviews & Comments</p>
+</div>
+<div class = "bottom-title-reviews">
+<div class = "left-title-review">
+<h1> Reviews </h1> <p> About Mr. Barreto </p>
+</div>
+
+<div class = "right-title-review">
+<h1> 5.00 </h1> <img src = "images/News/star-ratings-5.svg"> <p> (3 Reviews) </p>
+</div>
+</div>
+<div class = "comments">
+<img class = "comments-img" src = "images/News/person-review-1.svg"> <div class = "info-reviews"><img src ="images/News/star-ratings-5.svg"> <h1> Daph Aligan</h1> <p>Big shoutout to Sir Ryan! His car knowledge is top-notch, and he's super cool about answering questions. </div>
+ </div>
+<div class = "comments">
+<img class = "comments-img" src = "images/News/person-review-2.svg"> <div class = "info-reviews"><img src ="images/News/star-ratings-5.svg"> <h1> Miguel Traboc </h1> <p>Big thumbs up to Mr. Barreto! Buying a car was a breeze with his help. Solid 5/5 – he's just great! 👍🚗</div>
+ </div>
+ <div class = "comments">
+<img class = "comments-img" src = "images/News/person-review-3.svg"> <div class = "info-reviews"><img src ="images/News/star-ratings-5.svg"> <h1> Ed Valdez </h1> <p>Exceptional experience with Mr. Ryan Barreto! More than a salesman, he's your trusted car expert</div>
+ </div>
+ 
+ <div class = "bottom-right-side-news">
+<div class = "bottom-title-reviews">
+<div class = "left-title-review">
+<h1> Reviews </h1> <p> About the Website </p>
+</div>
+
+<div class = "right-title-review">
+<h1> 4.50 </h1> <img src = "images/News/4.5-rating.svg"> <p> (3 Reviews) </p>
+</div>
+</div>
+
+<div class = "comments">
+<img class = "comments-img" src = "images/News/person-reviews-2.svg"> <div class = "info-reviews"><img src ="images/News/star-ratings-5.svg"> <h1> Bapesta</h1> <p>Maganda pagkakagawa, yung pagkadesign at user friendly yung website </div>
+ </div>
+<div class = "comments">
+<img class = "comments-img" src = "images/News/person-reviews-3.svg"> <div class = "info-reviews"><img src ="images/News/star-ratings.svg"> <h1> James Aaron </h1> <p>The website is easy to use with a clear menu and easy ways to go to different parts </div>
+ </div>
+ <div class = "comments">
+<img class = "comments-img" src = "images/News/person-reviews-1.svg"> <div class = "info-reviews"><img src ="images/News/star-ratings.svg"> <h1> Fiona Diaresco </h1> <p>The website is easy to navigate.It is also nice to see how detailed the website is  </div>
+ </div>
+ </div>
+</div>
+</div>
+
+
+
+
+
+</div>
+
+
+<div class="latest_articles" id = "latestPosts">
+<div class = "article-container">
+    <div class="top">
+        <div class="LA"><p>LATEST POSTS</p></div>
+    </div>
+
+    <div class="radio-group">
+        <input type="radio" name="radio-group" id="radio1" checked="checked">
+        <label for="radio1"></label>
+        <div class="tab">
+            <div class="content-news">
+                <div class="item">
+                    <img src="images/News/Rectangle 573.svg">
+                     <a href = "https://www.facebook.com/photo.php?fbid=7904356936257713&set=a.7904345512925522&type=3"><div class="LA_text"><p>December 29, 2023 <br><br><b>Celebrating at Vikings </b></p></div></a>
+                </div>
+
+                <div class="item">
+                    <img src="images/News/Rectangle 574.svg">
+                     <a href = "https://www.facebook.com/photo/?fbid=387788100430535&set=a.387788180430527"><div class="LA_text"><p>January 1, 2024 <br><br><b>2024 Montero Glx Manual  </b></p></div></a>
+                </div>
+
+                <div class="item">
+                    <img src="images/News/Rectangle 575.svg">
+                    <a href = "https://www.facebook.com/photo.php?fbid=7127115750648506&set=a.6617617454931674&type=3"><div class="LA_text"><p> June 6, 2023 <br><br><b>Barreto as Top 3 Salesmen </b></p></div></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+	</div>
+</div>
+
+	
+<div class="footer">
+  <div class="section">
+    <div class="section1">
+      <img class="footer-logo" src="Images/Products/logo-footer.svg">
+      <p>DRIVE YOUR AMBITION</p>
+      <br>
+      <hr>
+      <div class="social-links">
+        <a href = "https://www.instagram.com/mitsubishi.ryanbarreto?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+		<img src="Images/Products/ig-logo.svg"> </a>
+        <a href = "https://x.com/JhonRyanBarret1?s=20">
+		<img src="Images/Products/twitter-logo.svg"></a>
+        <a href = "https://www.facebook.com/mitsubishimanilaph">
+		<img src="Images/Products/fb-logo.svg"></a>
+        <a href = "https://www.google.com/search?q=Mitsubishi+Otis+Paco+Manila">
+		<img src="Images/Products/google-logo.svg"></a>
+      </div>
+    </div>
+
+    <div class="section2">
+      <div class="quick-li">
+        <p class="footer-title">Quick Links</p>
+        <hr class="red-line">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="news-and-reviews.html">News & Reviews</a></li>
+          <li><a href="products.html">Product</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a href="promos/promosPage.html">Promos</a></li>
+        </ul>
+      </div>
+
+      <div class="contact-info">
+        <p class="footer-title">Contact</p>
+        <hr class="red-line">
+        <div class="infos">
+          <img src="images/Products/loc-logo.svg">
+          <p class="location-details">Mitsubishi Paco Manila</p>
+        </div>
+        <div class="infos">
+          <img src="images/Products/email-logo.svg">
+          <p class="info-p">ryan.mitsubishi@gmail.com</p>
+        </div>
+        <div class="infos">
+          <img src="images/Products/landline-logo.svg">
+          <p class="info-p">63-977 707 3312</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section3">
+      <p>Contact us by:</p>
+      <img class="call-box" src="images/Products/contact-no.svg">
+      <div class="credit-cards">
+        <img src="images/Products/card1.svg">
+        <img src="images/Products/card2.svg">
+        <img src="images/Products/card3.svg">
+        <img src="images/Products/card4.svg">
+        <img src="images/Products/card5.svg">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+
+var searchSuggestions = [
+    "News",
+    "Social Media",
+    "Video",
+    "Latest Posts",
+    "Reviews"
+];
+
+var searchInput = document.querySelector('.search-bar');
+var suggestionsList = document.getElementById('suggestions-list');
+
+searchInput.addEventListener('input', handleInput);
+
+function handleInput() {
+    var input = searchInput.value.toLowerCase();
+    var filteredSuggestions = searchSuggestions.filter(suggestion => suggestion.toLowerCase().includes(input));
+
+    suggestionsList.style.display = input.length === 0 || filteredSuggestions.length === 0 ? 'none' : 'block';
+    suggestionsList.innerHTML = filteredSuggestions.map(suggestion => '<div>' + suggestion + '</div>').join('');
+
+    suggestionsList.querySelectorAll('div').forEach(function (suggestionElement) {
+        suggestionElement.addEventListener('click', function () {
+            searchInput.value = suggestionElement.textContent;
+            // Scroll to the corresponding section based on the suggestion
+            scrollToSection(suggestionElement.textContent.toLowerCase());
+        });
+    });
+}
+
+function handleSearch(event) {
+    if (event.key === "Enter") {
+        // Handle Enter key press (you can add more logic here if needed)
+        scrollToSection(searchInput.value.toLowerCase());
+    }
+}
+
+function scrollToSection(input) {
+    var sectionId = input.replace(/\s+/g, ''); // Remove spaces
+    var section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+function toggleSearchBar() {
+    var searchBar = document.getElementById("searchBarContainer");
+    var searchLogo = document.querySelector(".search-logo");
+    var brandText = document.querySelector(".right-nav p");
+
+    if (searchBar.style.display === "none" || searchBar.style.display === "") {
+        searchBar.style.display = "block";
+        searchLogo.style.display = "none";
+        brandText.style.display = "none";
+    } else {
+        searchBar.style.display = "none";
+        searchLogo.style.display = "block";
+        brandText.style.display = "block";
+    }
+}
+
+function hideSearchBar() {
+    var searchBar = document.getElementById("searchBarContainer");
+    var searchLogo = document.querySelector(".search-logo");
+    var brandText = document.querySelector(".right-nav p");
+
+    searchBar.style.display = "none";
+    searchLogo.style.display = "block";
+    brandText.style.display = "block";
+}
+	
+
+var searchInput = document.querySelector('.search-bar');
+var suggestionsList = document.getElementById('suggestions-list');
+
+searchInput.addEventListener('input', handleInput);
+
+document.addEventListener('DOMContentLoaded', function () {
+  const rightSideNews = document.querySelector('.right-side-news');
+  const toggleButton = document.getElementById('toggleButton');
+
+  toggleButton.addEventListener('click', function () {
+    rightSideNews.style.display = (rightSideNews.style.display === 'none' || rightSideNews.style.display === '') ? 'block' : 'none';
+  });
+
+  function toggleButtonVisibility() {
+    if (window.innerWidth <= 1100) {
+      toggleButton.style.display = 'block';
+    } else {
+      toggleButton.style.display = 'none';
+      rightSideNews.style.display = 'block'; 
+    }
+  }
+
+
+  toggleButtonVisibility();
+
+
+  window.addEventListener('resize', toggleButtonVisibility);
+});
+
+
+	
+</script>
+
+</body>
+
+</html>
