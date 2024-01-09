@@ -23,16 +23,6 @@ a{
 }
 
 @font-face {
-    font-family: 'Craft Gothic';
-    src: local('Craft Gothic Regular'), local('Craft-Gothic-Regular'),
-        url('fonts/CraftGothic-Regular.woff2') format('woff2'),
-        url('fonts/CraftGothic-Regular.woff') format('woff'),
-        url('fonts/CraftGothic-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Craft Gothics Light';
     src: local('Craft Gothic Light'), local('Craft-Gothic-Light'),
         url('fonts/CraftGothic-Light.woff2') format('woff2'),
@@ -42,12 +32,13 @@ a{
     font-style: normal;
   }
 
-
 @font-face {
-    font-family: 'BITSUMIS';
-    src: local('BITSUMIS'), 
-        url('fonts/BITSUMIS.TTF') format('truetype');
-    font-weight: normal;
+    font-family: 'Craft Gothic';
+    src: local('Craft Gothic Regular'), local('Craft-Gothic-Regular'),
+        url('fonts/CraftGothic-Regular.woff2') format('woff2'),
+        url('fonts/CraftGothic-Regular.woff') format('woff'),
+        url('fonts/CraftGothic-Regular.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -75,42 +66,17 @@ a{
     font-style: normal;
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: white;
-}
-
-
-::-webkit-scrollbar-thumb {
-  background-color: #313131;
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: red;
+html {
+	font-size: 62.5%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-	font-size: 55%;
-}
-
-
-.openButton,
-.closeButton {
-	display: none;
+	margin: 0;
 }
 
 
 .navigation {
+	height: 8vh;
 	display: flex;
 	justify-content: space-between;
 	background-color: #333333;
@@ -177,29 +143,19 @@ html {
 
 .right-nav {
 	width: 25%;
-	max-width: 58rem;
 	padding-top: .5rem;
-	background-image: url('images/Products/nav-bg.svg');
+	background-image: url('nav-bg.svg');
 	background-size: cover;
 	background-position: center;
 	display: flex;
 	padding-right: 1%;
-	z-index: 999;
-	align-items: center;
-	justify-content: flex-end;
+	justify-content: space-between;	
+	align-items:center;
 }
-
-.right-nav p{
-	font-family: 'BITSUMIS';
-	margin-right: 1rem;
-	color: white;
-	font-size: clamp(2.3rem, 1.5vw, 4.5rem);
-}
-
 
 .logo-img img {
-	margin-right: 1rem;
-	display: block;
+	position:relative;
+	left: 6rem;
 	width: 4rem;
 	
 }
@@ -210,16 +166,13 @@ html {
 }
 .search-container {
 	margin-right: 10%;
-	position: relative;
 }
 .search-bar {
-	margin: 9% 0;
     padding: 1rem;
     border: 2px solid white;
     border-radius: 20px;
-	width: 12.5vw;
-	max-width: 24.5rem;
-	background-image: url('images/Homepage/search_icon.png');
+    min-width: 12.5vw;
+	background-image: url('images/search_icon.png');
 	background-repeat: no-repeat;
     background-position: 21.5rem center;
     background-color: rgba(0, 0, 0, 0);
@@ -236,32 +189,27 @@ html {
     color: white;
 }
 
-#suggestions-list {
-  background-color: grey;
-  font-family: 'Poppins';
-  font-size: 1.5rem;
-  display: none;
-  background: #252222;
-  color: white;
-  position: absolute;
-  margin-top:0;
-  width: 100%;
+.suggestion-item {
+	padding: 1rem 0 1rem 3rem;
+	font-size: 1.5rem;
+	font-family:'Poppins';
+	color: white;
+    margin-right: 10%;
+	background-color: transparent;
+	border: 1px solid white;
+	border-radius: 5px;
 }
 
-#suggestions-list span {
-  display: block;
-  padding: 1rem;
-  cursor: pointer;
-  border-bottom: 1px solid #ccc; 
+.suggestion-item:hover {
+    background-color: GREY; 
 }
 
-#suggestions-list span:last-child {
-  border-bottom: none;
+.content {
+    display: none;
 }
 
-#suggestions-list span:hover {
-  background-color: #f0f0f0;
-  color: black;
+.visible {
+    display: block;
 }
 
 
@@ -769,5 +717,4 @@ html {
     #check:checked ~ .menu {right: 0;}
 
 }
-
 
